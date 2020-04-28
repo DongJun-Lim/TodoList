@@ -8,6 +8,10 @@
     margin:0;
     padding: 0;
 }
+a{
+    text-decoration: none;
+    color:var(--blue);
+}
 li{
     list-style: none;
 }
@@ -30,7 +34,68 @@ header span{
     padding: 12px 12px 12px 50px;
     box-shadow: 10px 10px 10px 5px rgba(34, 134, 195, 0.8);
     margin-bottom:30px;
+    background-color:  rgb(255, 247, 247);
 }
 .todo-input::placeholder{
     color:var(--light-blue);
+    font-style: italic;
+}
+.todo-list{
+    display: none;
+    background-color: rgb(255, 247, 247);
+    border-radius: 10px;
+    border: 3px solid var(--blue);
+}
+.list-section li{
+    font-size: 20px;
+    padding:8px;
+    color:var(--dark-blue);
+}
+.list-section li:hover{
+    color:rgb(20, 89, 133);
+    text-decoration-line: line-through;
+}
+.list-section li.toggle{
+    color:var(--light-blue);
+    text-decoration-line: line-through;
+}
+.info-section {
+    background-color: var(--blue);
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color:white;
+}
+.info-section a {
+    color:white;
+
+}
+.info-section div a:not(.selected):hover {
+    color:orangered;
+
+}
+.choose-option{
+    display: flex;
+    justify-content: space-between;
+}
+.choose-option a{
+    padding:2px 5px;
+}
+.choose-option .selected{
+    background-color: orangered;
+    border-radius: 3px;
+}
+.clear:hover {
+    text-decoration-line: underline;
+}
+ul.list-section.All li{
+    display:block;
+}
+ul.list-section.Active li.toggle{
+    display: none;
+}
+ul.list-section.Completed li:not(.toggle){
+    display: none;
 }
